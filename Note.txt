@@ -1,0 +1,140 @@
+Javascript Note
+
+Prefer not to use var 
+because of issue in block scope and functional scope 
+ 
+ Datatypes:
+ "use strict" treat all js code as newer version
+
+ alert(3+3); we are useing node js not browser
+
+ 1.primitive Datatypes:
+ string
+ Nunbers
+ Boolean
+ Null // The value is null
+ Undefined //
+ symbol // make value unique
+ Bigint
+
+2.Non premitives Datatypes:
+ Arrays
+ Objects
+ Functions
+
+ # Stack(primitive)
+
+ # Heap (Non-primitive)
+
+
+ Javascript Execution context
+ {} => Global Execution context(This) 
+
+() => {} functional Execution context
+
+Eval Execution context
+
+
+Phase 
+1. Memory creation Phase => Memory allocation
+2. Execution Phase =>
+
+Steps of Execution (Code in (test.js))
+
+step1:
+Global Execution(this)
+
+Step 2:Memory Phase
+value1 -> Undefined
+value2 -> Undefined
+addvalues - defination
+result2 - undefined 
+result3 -> undefined
+
+Step 3: Execution Phase(Processing)
+value1 -> 5
+value2 -> 10
+addvalues -> new variable environment + Execution thread (
+    Two Phase:
+    1: Memeory Phase 
+        value1 -> undefined
+        value2 -> undefined
+        total -> undefined
+    2: Execution Phase
+        value1 -> 5 
+        value2 -> 10 
+        total -> 15
+
+) if this code finish to their run this will be delete
+
+
+ # Call Stack
+ use LIFO(Last in first out)
+ Eg:
+    If there is three functions 
+        1: One()
+        2: Two()
+        3: Three()
+
+if we call function one() in first this will be execute first in global execution 
+and out the function 
+
+Anothere case :
+If coder call one() function first and in function one() coder call another function Two()
+and in function Two() coder call another function Three() too the LIFO(Last in first out) is 
+implement in there first execute the function Three() and funtion Two() and function One()
+
+Example code : 
+functio one(){
+    console.log("one")
+    Two()
+}
+
+functio Two(){
+    console.log("Two")
+    Three()
+}
+function Three(){
+    console.log("Three")
+}
+
+one()
+Two()
+Three()
+
+# Control flow statement
+
+comparison operator
+
+(<) = Less then 
+
+(>) = Greater then
+
+(>=) greater then and equal
+
+(=) = single equal (Assigned operator)
+
+(==) = check the values are equal or not
+
+(=) = Not equal to
+
+(===) = check the datatypes of values
+
+(!==) = check the negative sign of the values
+
+# falsy value 
+1. False 
+2. 0
+3. -0 
+4. bigint 0n
+5. ""
+6. Null & Undefined
+7. NaN
+
+# Truthy value
+1."0" (in string value is true)
+2. 'false'
+3." "
+4.[]
+5. {}
+6. function(){} 
