@@ -67,7 +67,7 @@ val1 = null ?? 10 ?? 25 // it will take the first defined value
 console.log(val1);
 
 // Ternary operator
-condition ? true : false // syantax
+// condition ? true : false // syantax
 
 const iceTeaPirce = 100
 iceTeaPirce >= 80 ? console.log("Greater then 80") : console.log("Less then 80");
@@ -123,7 +123,113 @@ if(Object.keys(emotyObj).length === 0){
 }
 
 // -------------------------------------- For loop -----------------------------------------------
-
-for (let i = 1; i <= 5; i++){
+ 
+// syantax
+for (let i = 1; i <= 10; i++){
+    const element = i;
+    if (element == 5){
+        console.log("Skipping number 5");
+    }
     console.log(`Iteration number: ${i}`);
+} 
+// Nested for loop
+for (let j = 1; j <= 10; j++){
+    console.log(`outer Loop :${j}`);
+    
+    for (let k = 1; k <=10; k++){
+        console.log(j + '*' + k + '=' + (j*k));
+    }
+}
+
+let myArray = ['apple', 'banana', 'cherry']
+console.log(myArray.length);
+
+
+for (let index = 1; index < myArray.length; index++){
+    const element = myArray[index];
+    console.log(`Element at index ${index} is ${element}`);
+}
+
+//Keyword of loops
+
+//break 
+for (let a = 1; a <= 20; a++){
+    if (a == 10){
+        console.log(`Detected 10`);
+        break;
+        
+    }
+    console.log(`value of a is :${a}`); 
+}
+
+// continue
+for (let a = 1; a <= 20; a++){
+    if (a == 10){
+        console.log(`Detected 10`);
+        continue;
+        
+    }
+    console.log(`value of a is :${a}`); 
+}
+
+// ----------------------------------- While loops & Do while loops ------------------------------------
+
+// while loop
+let index = 0
+while (index <= 10){
+    console.log(`Value of loop :${index}`);
+    index = index + 2
+    
+
+}
+
+// with array
+let fruits = ['mango', 'orange', 'grape', 'pineapple']
+let fruitIndex = 1
+
+while (fruitIndex < fruits.length){
+    console.log(`Fruit at index ${fruitIndex} is ${fruits[fruitIndex]}`);
+    fruitIndex = fruitIndex + 1
+}
+
+// do while loop
+let score1 = 1
+do{
+    console.log(`Score is ${score1} `);
+    score1 = score1 + 1
+    
+}while (score1 < 10);
+
+// -------------------------------------------------High order Array loops ------------------------------------------
+// for of loop
+
+const colors = ['red', 'green', 'blue', 'yellow']
+
+for (const i of colors) {
+    console.log(i);
+    
+}
+
+// strings 
+ const myName = "Anil Pokhrel"
+    for (const char of myName){
+        console.log(`My name is ${char}`);
+    }
+
+//Maps
+
+const map = new Map()
+map.set('IN', 'Nepal')
+map.set('USA', 'United States')
+map.set('uk', 'United Kindom')
+
+for (const [key, value] of map){
+    console.log(key, ':-',value);
+    
+}
+
+// objects 
+const myObj ={
+    'name' : 'Nabina Poudel',
+    
 }
